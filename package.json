@@ -1,0 +1,66 @@
+{
+  "description": "Technology Studio - Service graphql",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/technology-studio/service-graphql.git"
+  },
+  "author": {
+    "name": "Technology Studio",
+    "email": "npm@technologystudio.sk",
+    "url": "https://bitbucket.org/technology-studio/"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "concurrently \"yarn workspaces run build:watch\" \"jest --watch\"",
+    "build": "yarn wpd build && yarn wd build",
+    "coverage": "jest --coverage && open coverage/lcov-report/index.html || xdg-open coverage/lcov-report/index.html",
+    "compare-boilerplate-version": "./scripts/compare-boilerplate-version.sh",
+    "lint": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx .",
+    "fixcode": "eslint --format=node_modules/eslint-formatter-pretty --ext .jsx,.js,.ts,.tsx . --fix",
+    "git-hook": "yarn -s lint-staged",
+    "ncu-all": "yarn workspaces run ncu -i && ncu -i",
+    "postinstall": "husky install",
+    "print-txo-packages": "yarn list 2> /dev/null|grep @txo|sed 's/.*\\(@txo[^@]*\\)@^*\\([^ ]*\\).*/\\1@\\2/g'|sort|uniq",
+    "sanity": "yarn lint && yarn build && tsc --noEmit && yarn test && yarn compare-boilerplate-version && yarn outdated && echo 'success'",
+    "update-boilerplate-version": "./scripts/update-boilerplate-version.sh",
+    "wd": "yarn workspace @txo/service-graphql",
+    "wpd": "yarn workspace @txo-peer-dep/service-graphql"
+  },
+  "workspaces": [
+    "packages/@txo/*",
+    "packages/@txo-peer-dep/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@apollo/client": "^3.5.10",
+    "@txo-peer-dep/log": "^4.0.0",
+    "@txo-peer-dep/service-graphql": "^3.1.3",
+    "@txo/log-console": "^3.0.0",
+    "@txo/service-prop": "^2.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/lodash.get": "^4.4.6",
+    "@types/react": "^17.0.43",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-txo-typescript": "^2.3.1",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "~2.25.4",
+    "eslint-plugin-jest": "26.1.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "graphql": "^15.6.1",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
+    "npm-check-updates": "^12.5.7",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  }
+}

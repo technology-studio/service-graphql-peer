@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "paths": {
+    }
+  },
+  "include": [
+    "example",
+    "__tests__"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
