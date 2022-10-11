@@ -4,18 +4,17 @@
  * @Copyright: Technology Studio
 **/
 
-import {
+import type {
   ApolloError,
   FetchResult,
 } from '@apollo/client'
-import { GraphQLError } from 'graphql'
-
+import type { GraphQLError } from 'graphql'
 import type {
   ServiceError,
 } from '@txo/service-prop'
 
 export enum ExtendedGraphQlErrorType {
-  VALIDATION = 'validation'
+  VALIDATION = 'validation',
 }
 
 export type ExtendedGraphQlError = GraphQLError & {

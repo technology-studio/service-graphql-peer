@@ -4,28 +4,28 @@
  * @Copyright: Technology Studio
 **/
 
+import type { ServiceError } from '@txo/service-prop'
 import {
-  ServiceError,
   ServiceErrorKey,
 } from '@txo/service-prop'
-// import { CODE_VALIDATION_ERROR } from '@txo/react-service-error-handler'
 import { Log } from '@txo/log'
+import type {
+  FetchResult,
+  ApolloError,
+  ServerError,
+  ServerParseError,
+} from '@apollo/client'
+import {
+  isApolloError,
+} from '@apollo/client'
+
 import type {
   OperationOptions,
   ExtendedGraphQlError,
 } from '../Model/Types'
-
-import {
-  FetchResult,
-  ApolloError,
-  isApolloError,
-  ServerError,
-  ServerParseError,
-} from '@apollo/client'
-
 import { UNKNOWN_ERROR } from '../Model'
 
-const log = new Log('txo.react-graphql-service.Services.ResponseTranslator')
+const log = new Log('txo.service-graphql-peer.Services.ResponseTranslator')
 
 const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: ExtendedGraphQlError): void => {
   serviceErrorList.push({
@@ -36,7 +36,7 @@ const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: Extended
   })
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isApolloErrorInternal = (response: any): response is ApolloError => isApolloError(response)
 export const isServerError = (error: Error | ServerParseError | ServerError): error is ServerError => 'result' in error
 export const isServerParseError = (error: Error | ServerParseError | ServerError): error is ServerParseError => 'statusCode' in error
