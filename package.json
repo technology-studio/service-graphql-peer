@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/technology-studio/service-graphql.git"
+    "url": "https://github.com/technology-studio/service-graphql-peer.git"
   },
   "author": {
     "name": "Technology Studio",
