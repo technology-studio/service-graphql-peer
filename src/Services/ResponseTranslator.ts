@@ -8,7 +8,6 @@ import type { ServiceError } from '@txo/service-prop'
 import {
   ServiceErrorKey,
 } from '@txo/service-prop'
-// import { CODE_VALIDATION_ERROR } from '@txo/react-service-error-handler'
 import { Log } from '@txo/log'
 import type {
   FetchResult,
@@ -26,7 +25,7 @@ import type {
 } from '../Model/Types'
 import { UNKNOWN_ERROR } from '../Model'
 
-const log = new Log('txo.react-graphql-service.Services.ResponseTranslator')
+const log = new Log('txo.service-graphql-peer.Services.ResponseTranslator')
 
 const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: ExtendedGraphQlError): void => {
   serviceErrorList.push({
