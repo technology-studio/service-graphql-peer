@@ -30,7 +30,7 @@ const log = new Log('txo.service-graphql-peer.Services.ResponseTranslator')
 const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: ExtendedGraphQlError): void => {
   serviceErrorList.push({
     // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-    key: error.key || error.extensions?.code || ServiceErrorKey.SERVER_ERROR,
+    key: error.key || error.extensions?.code as string || ServiceErrorKey.SERVER_ERROR,
     message: error.message,
     data: error,
   })
