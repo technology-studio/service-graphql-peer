@@ -29,8 +29,11 @@ const log = new Log('txo.service-graphql-peer.Services.ResponseTranslator')
 
 const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: ExtendedGraphQlError): void => {
   serviceErrorList.push({
-    // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-    key: error.key || error.extensions?.code as string || ServiceErrorKey.SERVER_ERROR,
+    key: error.key != null && error.key !== ''
+      ? error.key
+      : (error.extensions?.code != null && error.extensions.code !== '')
+          ? error.extensions.code as string
+          : ServiceErrorKey.SERVER_ERROR,
     message: error.message,
     data: error,
   })
@@ -46,10 +49,12 @@ export const defaultErrorResponseTranslator = (response: FetchResult<unknown> | 
   const serviceErrorList: ServiceError[] = []
   if (isApolloErrorInternal(response)) {
     const { networkError, clientErrors, graphQLErrors, message } = response
-    if (networkError) {
+    if (networkError != null) {
       serviceErrorList.push({
         key: isServerParseError(networkError) ? ServiceErrorKey.CLIENT_ERROR : ServiceErrorKey.NETWORK_ERROR,
-        message: networkError.message || message,
+        message: (networkError.message.length > 0)
+          ? networkError.message
+          : message,
         data: networkError,
       })
       if (isServerError(networkError)) {
@@ -59,10 +64,14 @@ export const defaultErrorResponseTranslator = (response: FetchResult<unknown> | 
       }
     }
     graphQLErrors.forEach((graphQLError: ExtendedGraphQlError) => {
+      const { key } = graphQLError
       serviceErrorList.push({
-        // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-        key: graphQLError.key || ServiceErrorKey.CLIENT_ERROR,
-        message: graphQLError.message || message,
+        key: (key != null && key !== '')
+          ? key
+          : ServiceErrorKey.CLIENT_ERROR,
+        message: (graphQLError.message != null && graphQLError.message !== '')
+          ? graphQLError.message
+          : message,
         data: graphQLError,
       })
     })
