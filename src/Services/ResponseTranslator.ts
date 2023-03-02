@@ -52,7 +52,7 @@ export const defaultErrorResponseTranslator = (response: FetchResult<unknown> | 
     if (networkError != null) {
       serviceErrorList.push({
         key: isServerParseError(networkError) ? ServiceErrorKey.CLIENT_ERROR : ServiceErrorKey.NETWORK_ERROR,
-        message: (networkError.message.length > 0)
+        message: (networkError.message != null && networkError.message.length > 0)
           ? networkError.message
           : message,
         data: networkError,
