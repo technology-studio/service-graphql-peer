@@ -58,9 +58,17 @@ export const defaultErrorResponseTranslator = (response: FetchResult<unknown> | 
         data: networkError,
       })
       if (isServerError(networkError)) {
-        networkError.result.errors?.forEach((error: ExtendedGraphQlError) => {
-          populateGraphQLErrors(serviceErrorList, error)
-        })
+        if (typeof networkError.result === 'string') {
+          serviceErrorList.push({
+            key: ServiceErrorKey.SERVER_ERROR,
+            message: networkError.message,
+            data: networkError,
+          })
+        } else {
+          networkError.result.errors?.forEach((error: ExtendedGraphQlError) => {
+            populateGraphQLErrors(serviceErrorList, error)
+          })
+        }
       }
     }
     graphQLErrors.forEach((graphQLError: ExtendedGraphQlError) => {
