@@ -38,7 +38,7 @@
     "@txo/log": "^2.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.7.14",
+    "@apollo/client": "^3.7.15",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@semantic-release/changelog": "^6.0.3",
