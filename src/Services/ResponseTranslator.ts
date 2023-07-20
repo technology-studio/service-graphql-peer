@@ -40,7 +40,7 @@ const populateGraphQLErrors = (serviceErrorList: ServiceError[], error: Extended
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const isApolloErrorInternal = (response: any): response is ApolloError => isApolloError(response)
+export const isApolloErrorInternal = (response: any): response is ApolloError => isApolloError(response as Error)
 export const isServerError = (error: Error | ServerParseError | ServerError): error is ServerError => 'result' in error
 export const isServerParseError = (error: Error | ServerParseError | ServerError): error is ServerParseError => 'statusCode' in error
 
@@ -65,7 +65,7 @@ export const defaultErrorResponseTranslator = (response: FetchResult<unknown> | 
             data: networkError,
           })
         } else {
-          networkError.result.errors?.forEach((error: ExtendedGraphQlError) => {
+          (networkError.result.errors as ExtendedGraphQlError[])?.forEach((error) => {
             populateGraphQLErrors(serviceErrorList, error)
           })
         }
