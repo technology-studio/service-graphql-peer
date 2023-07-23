@@ -1,3 +1,10 @@
+## [3.2.8](https://github.com/technology-studio/service-graphql-peer/compare/v3.2.7...v3.2.8) (2023-07-23)
+
+
+### Bug fixes
+
+* **deps:** update dependency @txo/log to ^2.0.8 ([0bcdd29](https://github.com/technology-studio/service-graphql-peer/commit/0bcdd297d7861e16b3256e80994d3edd365358e1))
+
 ## [3.2.7](https://github.com/technology-studio/service-graphql-peer/compare/v3.2.6...v3.2.7) (2023-07-22)
 
 
