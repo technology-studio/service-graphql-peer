@@ -1,3 +1,10 @@
+## [3.3.0](https://github.com/technology-studio/service-graphql-peer/compare/v3.2.13...v3.3.0) (2023-11-10)
+
+
+### Features
+
+* migrate to flat eslint config ([#489](https://github.com/technology-studio/service-graphql-peer/issues/489)) ([f2f666a](https://github.com/technology-studio/service-graphql-peer/commit/f2f666ae148ac8997730cbaf87c08dc150c9acd1))
+
 ## [3.2.13](https://github.com/technology-studio/service-graphql-peer/compare/v3.2.12...v3.2.13) (2023-09-20)
 
 
