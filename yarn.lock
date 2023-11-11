@@ -1482,23 +1482,18 @@
   resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.2.0.tgz#d6bf817d0b8fa2eece61f79fc99eedf2516d68b1"
   integrity sha512-P4t09H/Q6AHoyps0jBy5tSp/HruQteyUeoxr758D2entD+rd8f0XXAdcrCCEIBeihlNAkv4MVj/n8bJulw5CLg==
 
-"@txo/functional@^4.6.16":
-  version "4.6.16"
-  resolved "https://registry.yarnpkg.com/@txo/functional/-/functional-4.6.16.tgz#d634755e8d09e904e697a26b87fb5e53499943d7"
-  integrity sha512-KCQYDZ7GtTBkgT9Us1GUL3p+pDQ4lOzEYKqenrn4ooSn8kbxocQtlVgw2AYuxD1MRFuECQgl/gV4xFM12YcJMg==
+"@txo/functional@^4.6.17":
+  version "4.6.17"
+  resolved "https://registry.yarnpkg.com/@txo/functional/-/functional-4.6.17.tgz#6524b8850e7ff7e593d07b3ffa376910572e90b7"
+  integrity sha512-n+V7CQseye5rm6UqQfHXCxkyP57Nld/ZSUy8GIb0W4iBKW/hta498uA+ZvWpsrzZfQObjCCDVJQbq4RHRWnSNQ==
   dependencies:
-    "@txo/log" "^2.0.13"
+    "@txo/log" "^2.0.14"
     utility-types "^3.10.0"
 
 "@txo/log-console@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@txo/log-console/-/log-console-3.0.0.tgz#56506a8c6afea9109301ff96520c43815814022d"
   integrity sha512-Dl7dnPMUXRr1JSBysUmzT9/RjMm9FWJdtZ9CXVnh9K4qwpT4fnjDV+GWiHHWAqob47XcE7N98M8rShGmpsukqg==
-
-"@txo/log@^2.0.13":
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/@txo/log/-/log-2.0.13.tgz#663100f59df18f4ddec9d85f62a20ec4b5e24b54"
-  integrity sha512-fDUAJ5n+bC+/xqHFpM4Ua4nuQjWcRLTSksLR5mLXZoUlH787SUzFkpUvjFJeiGKXOqUKt35ImInLZb0oQ6yHhg==
 
 "@txo/log@^2.0.14":
   version "2.0.14"
@@ -1515,12 +1510,12 @@
     semantic-release "^22.0.7"
     semantic-release-slack-bot "^4.0.2"
 
-"@txo/service-prop@^2.2.15":
-  version "2.2.15"
-  resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.15.tgz#bba6b187c3c9b1e9cda8138e59fceeaef518b986"
-  integrity sha512-CMbiC9j7bszpOAQ/9gL9F0OpQmv3Zcj0qZqf3H/0xbn8n9hFuk44wUTBUmRd9bxrnQeRCyBkfluxGcneNyj8NA==
+"@txo/service-prop@^2.2.16":
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.16.tgz#e18264bfd19583faf717f2425f92259f75ee7576"
+  integrity sha512-51R0uGJvp3yttxQ43S739x8TNL0JB4MxmaRHv3IpXgXS5DFsyKlJH8riOuQbH8Ly547ib85Abbu4BS6SmSp5ag==
   dependencies:
-    "@txo/functional" "^4.6.16"
+    "@txo/functional" "^4.6.17"
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
