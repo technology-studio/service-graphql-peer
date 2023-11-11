@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/technology-studio/service-graphql-peer/compare/v3.3.0...v3.3.1) (2023-11-11)
+
+
+### Bug fixes
+
+* **deps:** update dependency @txo/config-manager to ^3.2.0 ([807620c](https://github.com/technology-studio/service-graphql-peer/commit/807620cbbcb80c7ea6a5c94c1cd44c0e4396804b))
+
 ## [3.3.0](https://github.com/technology-studio/service-graphql-peer/compare/v3.2.13...v3.3.0) (2023-11-10)
 
 
