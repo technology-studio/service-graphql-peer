@@ -1,7 +1,6 @@
 {
   "extends": "@txo/tsconfig",
   "compilerOptions": {
-    "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "lib": ["esnext", "dom"]
   }
 }
