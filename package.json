@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@txo/config-manager": "^3.2.0",
-    "@txo/log": "^2.0.14"
+    "@txo/log": "^2.0.16"
   },
   "devDependencies": {
     "@apollo/client": "^3.9.10",
