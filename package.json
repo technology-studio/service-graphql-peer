@@ -50,7 +50,7 @@
     "@txo/tsconfig": "^1.1.1",
     "@types/jest": "^29.5.12",
     "@types/node-fetch": "^2.6.11",
-    "@types/react": "^18.2.77",
+    "@types/react": "^18.2.78",
     "concurrently": "^8.2.2",
     "eslint-config-txo-typescript": "^4.0.53",
     "graphql": "^16.8.1",
