@@ -44,7 +44,7 @@
   "devDependencies": {
     "@apollo/client": "^3.10.8",
     "@txo-peer-dep/log": "^4.0.4",
-    "@txo/commitlint": "^1.0.16",
+    "@txo/commitlint": "^1.0.17",
     "@txo/log-console": "^3.0.0",
     "@txo/semantic-release": "^2.0.8",
     "@txo/service-prop": "^2.2.18",
