@@ -52,7 +52,7 @@
     "@txo/tsconfig-cjs": "^2.0.0",
     "@types/jest": "^29.5.14",
     "@types/node-fetch": "^2.6.12",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.13",
     "concurrently": "^9.1.0",
     "eslint-config-txo-typescript": "^4.0.70",
     "graphql": "^16.9.0",
