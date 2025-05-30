@@ -51,7 +51,7 @@
     "@txo/service-prop": "^2.2.20",
     "@txo/tsconfig-cjs": "^2.0.0",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.15.26",
+    "@types/node": "^22.15.27",
     "@types/node-fetch": "^2.6.12",
     "@types/react": "^18.3.23",
     "concurrently": "^9.1.2",
