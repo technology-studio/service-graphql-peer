@@ -53,7 +53,7 @@
     "@types/jest": "^29.5.14",
     "@types/node": "^22.16.5",
     "@types/node-fetch": "^2.6.12",
-    "@types/react": "^18.3.23",
+    "@types/react": "^19.1.8",
     "concurrently": "^9.2.0",
     "eslint-config-txo-package-typescript": "^1.0.107",
     "graphql": "^16.11.0",
