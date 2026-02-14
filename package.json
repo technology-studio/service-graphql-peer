@@ -48,7 +48,7 @@
     "@txo/commitlint": "^1.0.24",
     "@txo/log-console": "^3.0.0",
     "@txo/semantic-release": "^2.0.10",
-    "@txo/service-prop": "^2.2.20",
+    "@txo/service-prop": "^3.0.3",
     "@txo/tsconfig-cjs": "^2.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.19.7",
